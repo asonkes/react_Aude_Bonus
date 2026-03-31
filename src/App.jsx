@@ -8,7 +8,7 @@ function App() {
     <>
       <Header/>
 
-      <main >
+      <main className="flex items-center">
         <Outlet></Outlet>
       </main>
 

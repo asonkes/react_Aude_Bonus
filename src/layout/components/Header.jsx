@@ -23,6 +23,10 @@ export const Header = () => {
                 <li>
                     <NavLink className="link" to="/promodoro">Promodoro</NavLink>
                 </li>
+
+                <li>
+                    <NavLink className="btn" to="/login">Me connecter</NavLink>
+                </li>
             </ul>
         </nav>
     </header>
