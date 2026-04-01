@@ -23,9 +23,17 @@ export const Header = () => {
                 <li>
                     <NavLink className="link" to="/promodoro">Promodoro</NavLink>
                 </li>
-
                 <li>
-                    <NavLink className="btn" to="/login">Me connecter</NavLink>
+                    <NavLink className="link" to="/faq">Faq</NavLink>
+                </li>
+                <li>
+                    <NavLink className="link" to="/about">About</NavLink>
+                </li>
+                <li>
+                    <NavLink className="btn" to="/auth/login">Me connecter</NavLink>
+                </li>
+                <li>
+                    <NavLink className="btn" to="/auth/register">Créer un compte</NavLink>
                 </li>
             </ul>
         </nav>

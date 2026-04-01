@@ -1,0 +1,42 @@
+[
+    {
+        "id": 0,
+        "text": "Quel âge as-tu???"
+    },
+    {
+        "id": 1,
+        "text": "Crois-tu que ta formation est complète ???"
+    },
+    {
+        "id": 2,
+        "text": "Va-t-il faire beau ce week-end ??"
+    },
+    {
+        "id": 3,
+        "text": "As-tu un animal de compagnie ?"
+    },
+    {
+        "id": 4,
+        "text": "Es-tu heureuse ???"
+    },
+    {
+        "id": 5,
+        "text": "J'ai faim et toi ???"
+    },
+    {
+        "id": 6,
+        "text": "A cause de la poste, je reçois pas les croquettes de mon chat, es-tu impacté par la grève ???"
+    },
+    {
+        "id": 7,
+        "text": "J'ai commencé à planter mes légumes, et toi, aimes-tu faire des semis ??"
+    },
+    {
+        "id": 8,
+        "text": "Je sais, c'est pas top, mais j'aime bien l'île d ela tentation et toi ???"
+    },
+    {
+        "id": 9,
+        "text": "Va-t-il faire beau ce week-end ???"
+    }
+]
