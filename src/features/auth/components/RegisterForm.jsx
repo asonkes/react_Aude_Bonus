@@ -45,7 +45,7 @@ export const RegisterForm = () => {
 
         <div>
             <label htmlFor={id + 'password'}>Mot de passe: </label>
-            <input id={id + 'password'} name="password" type="text" className="border"/>
+            <input id={id + 'password'} name="password" type="password" className="border"/>
          </div>
 
          <div>
