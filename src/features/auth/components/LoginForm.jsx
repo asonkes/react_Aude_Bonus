@@ -1,9 +1,12 @@
-import { useId } from "react"
+import { useAtom } from 'jotai';
+import { useId } from "react";
 import authService from "../../../services/auth.service";
 import { useNavigate } from "react-router";
 
 
 export const LoginForm = () => {
+
+    const [connect, setConnect] = useAtom(connectAtom);
 
     const id = useId();
     const navigate = useNavigate();
