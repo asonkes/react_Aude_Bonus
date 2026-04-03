@@ -1,10 +1,15 @@
 import { useId } from "react";
 import authService from "../../../services/auth.service";
 import { useNavigate } from "react-router";
+import { useSetAtom } from "jotai";
+import { tokenAtom } from "../../../atoms/auth.atom";
 
 export const LoginForm = () => {
   const id = useId();
   const navigate = useNavigate();
+  // lui, il a juste besoin de lire l'atome
+  // Donc on garde juste le 'set'
+  const setToken = useSetAtom(tokenAtom);
 
   const handleLoginSubmit = async (formData) => {
     console.log(formData);
@@ -13,7 +18,10 @@ export const LoginForm = () => {
     console.log("Data", data);
 
     const token = await authService.login(data);
-    console.log("Token", token);
+    // A la place du console.log, je mets le 'setAtom'
+    // Donc je sais le stocker, il ne se met juste pas dans la console
+    // console.log("Token", token);
+    setToken(token);
 
     navigate("/");
   };

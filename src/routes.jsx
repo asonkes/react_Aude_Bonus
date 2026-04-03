@@ -7,6 +7,7 @@ import { About } from "./layout/pages/About";
 import { Faq } from "./layout/pages/Faq";
 import { Register } from "./features/auth/pages/Register";
 import { Login } from "./features/auth/pages/Login";
+import { PageProtected } from "./features/auth/components/PageProtected";
 
 /**
  * @type {@import ('react-router').RouteObject}
@@ -23,7 +24,7 @@ export const routes =  [
             },
             {
                 path: '/tasks',
-                element: <TaskHome/>
+                element: <PageProtected><TaskHome/></PageProtected>
             },
             {
                 path: '/promodoro',
@@ -52,7 +53,7 @@ export const routes =  [
             },
             {
                 path: 'task/:id',
-                element: <TaskDetails/>             
+                element: <PageProtected><TaskDetails/></PageProtected>          
             },
 
             // Toujours à mettre en dernier

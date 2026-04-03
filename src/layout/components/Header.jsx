@@ -1,6 +1,12 @@
-import { NavLink } from "react-router"
+import { useAtomValue } from "jotai";
+import { NavLink } from "react-router";
+import { isConnectAtom } from "../../atoms/auth.atom";
+import { BtnLogout } from "../../features/auth/components/BtnLogout";
 
 export const Header = () => {
+
+    const isConnect = useAtomValue(isConnectAtom);
+
   return (
     <header className="flex justify-between py-4 px-8 bg-primary-100">
         <div className="flex items-center gap-4">
@@ -29,12 +35,21 @@ export const Header = () => {
                 <li>
                     <NavLink className="link" to="/about">About</NavLink>
                 </li>
-                <li>
-                    <NavLink className="btn" to="/auth/login">Me connecter</NavLink>
-                </li>
-                <li>
-                    <NavLink className="btn" to="/auth/register">Créer un compte</NavLink>
-                </li>
+                {
+                   !isConnect ? (
+                    <div className="btn-grp flex flex-row">
+                        <li>
+                            <NavLink className="btn" to="/auth/login">Me connecter</NavLink>
+                        </li>
+                        <li>
+                            <NavLink className="btn" to="/auth/register">Créer un compte</NavLink>
+                        </li>
+                    </div>
+                   ) :
+                   (
+                    <BtnLogout/>
+                   )
+                }
             </ul>
         </nav>
     </header>
